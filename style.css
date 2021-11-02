@@ -6,6 +6,7 @@ tr,td {
     border: 1px;
     border-style: solid;
     text-align: center;
+    font-size: large;
 }
 img {
     border-radius: 5%; 
