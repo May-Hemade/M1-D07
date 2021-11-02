@@ -5,10 +5,11 @@
 tr,td {
     border: 1px;
     border-style: solid;
+    text-align: center;
 }
 img {
     border-radius: 5%; 
-    width: 100px;
+    width: 200px;
     margin-top: 2ch;
     border-color: lightgray;
     border-width: 2px;
@@ -45,3 +46,24 @@ input {
 .price {
 
 }
+
+
+.main-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.2em; }
+
+
+    body { 
+        background-color: rgb(219, 186, 192);
+    }
+    table th { 
+        text-align: center;
+        font-size: large;
+        font-weight: 800;
+
+       
+    }
+    
