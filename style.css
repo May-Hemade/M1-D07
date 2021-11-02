@@ -2,7 +2,7 @@
 
 
 
-table,tr,td {
+tr,td {
     border: 1px;
     border-style: solid;
 }
@@ -23,4 +23,25 @@ input {
 
 .bodyColor {
     background-color: blanchedalmond;
+}
+#address{
+    color: rgb(68, 0, 255);
+
+}
+
+.aClass {
+    list-style: none;
+    padding-left: 0;
+   color: rgba(255, 255, 255, 0.808);
+
+    text-decoration: none;
+    color: #1cb616;
+
+}
+.image-visibility  {
+    visibility: hidden;
+
+}
+.price {
+
 }

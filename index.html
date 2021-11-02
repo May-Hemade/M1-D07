@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body >
-      <button onclick="changeTitle()">Change Shop Name</button>
-      <button onclick="changeBodyColor()">Change Background color</button>
+  <body>
+    <button onclick="changeTitle()">Change Shop Name</button>
+    <button onclick="changeBodyColor()">Change Background color</button>
+    <button onclick="changeAddress()">Fake Address</button>
+    <button onclick="addToLink()">Link change</button>
+    <button onclick="imageVisibility()">Disappear Image</button>
+    <button onclick="priceColor()">Price Color</button>
     <h1>May's Cake Shop</h1>
 
     <table>
@@ -26,24 +30,32 @@
         <td>
           <img src="/images/yellow-butter-cake.jpeg" alt="Yellow cake" />
         </td>
-        <td>9$</td>
-        <td> <a href="https://www.amazon.de/-/en/40991000/dp/B00XMYUJ3O/" >Buy Now </a></td>
+        <td class="price">9$</td>
+        <td>
+          <a href="https://www.amazon.de/-/en/40991000/dp/B00XMYUJ3O/"
+            >Buy Now
+          </a>
+        </td>
       </tr>
       <tr>
         <td>Pound Cake</td>
         <td>
           <img src="/images/pound-cake.jpeg" alt="Pound Cake" />
         </td>
-        <td>8$</td>
-        <td> <a href= "https://www.amazon.de/-/en/dp/B004N5MH5E/" >Buy Now </a></td>
+        <td class="price">8$</td>
+        <td>
+          <a href="https://www.amazon.de/-/en/dp/B004N5MH5E/">Buy Now </a>
+        </td>
       </tr>
       <tr>
         <td>Carrot Cake</td>
         <td>
           <img src="/images/carrot-cake.jpeg" alt="carrot cake" />
         </td>
-        <td>7$</td>
-        <td> <a href= "https://www.amazon.de/-/en/13725/dp/B071LDSJL6/" >Buy Now </a></td>
+        <td class="price">7$</td>
+        <td>
+          <a href="https://www.amazon.de/-/en/13725/dp/B071LDSJL6/">Buy Now </a>
+        </td>
       </tr>
       <tr>
         <td>Red Velvet Cake</td>
@@ -51,43 +63,80 @@
         <td>
           <img src="images/velvet-cake.jpeg" alt="REd velvet-cake" />
         </td>
-        <td>6$</td>
-        <td> <a href= "https://www.amazon.de/-/en/10005054/dp/B008JA162O/">Buy Now </a></td>
+        <td class="price">6$</td>
+        <td>
+          <a href="https://www.amazon.de/-/en/10005054/dp/B008JA162O/"
+            >Buy Now
+          </a>
+        </td>
       </tr>
       <tr>
         <td>Flourless cake</td>
         <td>
           <img src="/images/Flourless cake.jpeg" alt="flourless cake" />
         </td>
-        <td>10$</td>
-        <td> <a href= "https://www.amazon.de/Pieces-Decorations-Birthday-Decoration-Topper/dp/B0967M88GF" >Buy Now </a></td>
+        <td class="price">10$</td>
+        <td>
+          <a
+            href="https://www.amazon.de/Pieces-Decorations-Birthday-Decoration-Topper/dp/B0967M88GF"
+            >Buy Now
+          </a>
+        </td>
       </tr>
     </table>
 
     <h4>Feedback</h4>
-    <input type="text" placeholder="please insert your feedback"/>
+    <input type="text" placeholder="please insert your feedback" />
 
     <footer>
-        <p>
-            address: Lozents street 26 </br>
-            Shop Name: May's Cake Shop
-        </p>
+      <div>
+        <p id="address">Address: Lozents street 26</p>
+        <p>Shop Name: May's Cake Shop</p>
+      </div>
     </footer>
-<script type="text/javascript">
-    const changeTitle = function(){
+    <script type="text/javascript">
+      const changeTitle = function () {
         let headerNodes = document.getElementsByTagName("h1")
-        for(let headerNode of headerNodes) {
-            headerNode.innerText= "New Cake shop"
+        for (let headerNode of headerNodes) {
+          headerNode.innerText = "New Cake shop"
         }
+      }
 
-    }
+      const changeBodyColor = function () {
+        document.body.classList.toggle("bodyColor")
+      }
+      const changeAddress = function () {
+        let addressNode = document.getElementById("address")
+        addressNode.innerText = "Beirut Street 14"
+      }
 
-    const changeBodyColor =function(){
-       document.body.classList.toggle("bodyColor")
-      
+      const addToLink = function () {
+        let linkNodes = document.getElementsByTagName("a")
+        for (let linkNode of linkNodes) {
+          linkNode.classList.add("aClass")
         }
+      }
+      const imageVisibility = function () {
+        let imageNodes = document.getElementsByTagName("img")
+        for (let imageNode of imageNodes) {
+          imageNode.classList.toggle("image-visibility")
+        }
+      }
 
+      const priceColor = function (){
+          let priceNodes = document.getElementsByClassName("price")
+          let color= randomColor()
+          for( let priceNode of priceNodes){
+              priceNode.style.color=color
+          }
 
-</script>
+      }
+      const randomColor = function(){
+          const colorArr  =[ "red","blue","brown","pink","purple"]
+          
+          let index = Math.round (Math.random()*(colorArr.length-1))
+          return colorArr[index]
+      }
+    </script>
   </body>
 </html>
