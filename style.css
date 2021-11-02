@@ -5,8 +5,15 @@
 tr,td {
     border: 1px;
     border-style: solid;
+    border-color: rgb(165, 148, 167);
     text-align: center;
     font-size: large;
+    border-radius: 5%;
+}
+
+td:hover { 
+    background-color:#5529242b;
+
 }
 img {
     border-radius: 5%; 
@@ -15,13 +22,9 @@ img {
     border-color: lightgray;
     border-width: 2px;
     border-style: solid;
-   
-}
-input {
-    display: flex;
-    width: 1000px;
-    height: 200px;
     
+     object-fit: contain;
+   
 }
 
 .bodyColor {
@@ -39,24 +42,33 @@ input {
    color: rgba(255, 255, 255, 0.808);
 
     text-decoration: none;
-    color: #1cb616;
+    color: #4b2a41;
 
 }
 .image-visibility  {
     visibility: hidden;
 
 }
-.price {
+.price { text-decoration: purple;
 
 }
 
+button { 
+    color: grey;
+    background-color: rgb(190, 171, 186);
+    font-size: large;
+    
+    padding: 3ch;
+}
 
 .main-section {
     padding: 20px;
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.2em; }
+    letter-spacing: 0.2em; 
+    color:rgb(90, 83, 85);
+}
 
 
     body { 
@@ -68,5 +80,18 @@ input {
         font-weight: 800;
 
        
+    }
+    h1{
+       color: rgb(90, 83, 85);
+       padding-bottom: 2ch;
+       text-align: center;
+    }
+
+    .feedback {
+        
+    background-color: rgb(190, 171, 186);
+    font-size: large;
+    height: 50px;
+
     }
     

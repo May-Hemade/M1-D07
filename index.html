@@ -83,15 +83,14 @@
         <td ><span class="price">6$</span></td>
         <td>
           <a
-            href="https://www.amazon.de/Pieces-Decorations-Birthday-Decoration-Topper/dp/B0967M88GF"
-            >Buy Now
+            href="https://www.amazon.de/Pieces-Decorations-Birthday-Decoration-Topper/dp/B0967M88GF" >Buy Now
           </a>
         </td>
       </tr>
     </table>
 
     <h4>Feedback</h4>
-    <input type="text" placeholder="please insert your feedback" />
+    <input class="feedback" type="text" placeholder="Please insert your feedback" />
 
     <footer>
       <div>
@@ -128,20 +127,43 @@
         }
       }
 
-      const priceColor = function (){
+    //   const priceColor = function (){
+    //       let priceNodes = document.querySelectorAll(".price")
+    //       let color= randomColor()
+    //       for( let priceNode of priceNodes){
+    //           priceNode.style.color=color
+    //       }
+
+    //   }
+    //   const randomColor = function(){
+    //       const colorArr  =[ "red","blue","brown","green","purple"]
+          
+    //       let index = Math.round (Math.random()*(colorArr.length-1))
+    //       return colorArr[index]
+    //   }
+
+
+        let count = 0 
+    const priceColor = function (){ 
+        if(count < 5 ){ 
+            count++
           let priceNodes = document.querySelectorAll(".price")
-          let color= randomColor()
+          let color= `rgb(${randomColor()},${randomColor()},${randomColor()})`
           for( let priceNode of priceNodes){
               priceNode.style.color=color
-          }
+              
+          } 
+        }  
 
       }
-      const randomColor = function(){
-          const colorArr  =[ "red","blue","brown","green","purple"]
+
+       const randomColor = function(){
           
-          let index = Math.round (Math.random()*(colorArr.length-1))
-          return colorArr[index]
+          let index = Math.round (Math.random()*255)
+          return index
       }
+    
+     
     </script>
   </body>
 </div>
