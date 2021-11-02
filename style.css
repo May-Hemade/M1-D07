@@ -1,0 +1,26 @@
+
+
+
+
+table,tr,td {
+    border: 1px;
+    border-style: solid;
+}
+img {
+    border-radius: 5%; 
+    width: 100px;
+    margin-top: 2ch;
+    border-color: lightgray;
+    border-width: 2px;
+    border-style: solid;
+   
+}
+input {
+    width: 200px;
+    height: 200px;
+    
+}
+
+.bodyColor {
+    background-color: blanchedalmond;
+}

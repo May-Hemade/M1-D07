@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body >
+      <button onclick="changeTitle()">Change Shop Name</button>
+      <button onclick="changeBodyColor()">Change Background color</button>
+    <h1>May's Cake Shop</h1>
+
+    <table>
+      <th>Cake Type</th>
+
+      <th>Cake Image</th>
+
+      <th>Cake Price</th>
+
+      <tr>
+        <td>Yellow Butter Cake</td>
+        <td>
+          <img src="/images/yellow-butter-cake.jpeg" alt="Yellow cake" />
+        </td>
+        <td>9$</td>
+        <td> <a href="https://www.amazon.de/-/en/40991000/dp/B00XMYUJ3O/" >Buy Now </a></td>
+      </tr>
+      <tr>
+        <td>Pound Cake</td>
+        <td>
+          <img src="/images/pound-cake.jpeg" alt="Pound Cake" />
+        </td>
+        <td>8$</td>
+        <td> <a href= "https://www.amazon.de/-/en/dp/B004N5MH5E/" >Buy Now </a></td>
+      </tr>
+      <tr>
+        <td>Carrot Cake</td>
+        <td>
+          <img src="/images/carrot-cake.jpeg" alt="carrot cake" />
+        </td>
+        <td>7$</td>
+        <td> <a href= "https://www.amazon.de/-/en/13725/dp/B071LDSJL6/" >Buy Now </a></td>
+      </tr>
+      <tr>
+        <td>Red Velvet Cake</td>
+
+        <td>
+          <img src="images/velvet-cake.jpeg" alt="REd velvet-cake" />
+        </td>
+        <td>6$</td>
+        <td> <a href= "https://www.amazon.de/-/en/10005054/dp/B008JA162O/">Buy Now </a></td>
+      </tr>
+      <tr>
+        <td>Flourless cake</td>
+        <td>
+          <img src="/images/Flourless cake.jpeg" alt="flourless cake" />
+        </td>
+        <td>10$</td>
+        <td> <a href= "https://www.amazon.de/Pieces-Decorations-Birthday-Decoration-Topper/dp/B0967M88GF" >Buy Now </a></td>
+      </tr>
+    </table>
+
+    <h4>Feedback</h4>
+    <input type="text" placeholder="please insert your feedback"/>
+
+    <footer>
+        <p>
+            address: Lozents street 26 </br>
+            Shop Name: May's Cake Shop
+        </p>
+    </footer>
+<script type="text/javascript">
+    const changeTitle = function(){
+        let headerNodes = document.getElementsByTagName("h1")
+        for(let headerNode of headerNodes) {
+            headerNode.innerText= "New Cake shop"
+        }
+
+    }
+
+    const changeBodyColor =function(){
+       document.body.classList.toggle("bodyColor")
+      
+        }
+
+
+</script>
+  </body>
+</html>
