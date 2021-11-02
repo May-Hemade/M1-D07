@@ -116,20 +116,20 @@
       }
 
       const addToLink = function () {
-        let linkNodes = document.getElementsByTagName("a")
+        let linkNodes = document.querySelectorAll("a")
         for (let linkNode of linkNodes) {
           linkNode.classList.add("aClass")
         }
       }
       const imageVisibility = function () {
-        let imageNodes = document.getElementsByTagName("img")
+        let imageNodes = document.querySelectorAll("img")
         for (let imageNode of imageNodes) {
           imageNode.classList.toggle("image-visibility")
         }
       }
 
       const priceColor = function (){
-          let priceNodes = document.getElementsByClassName("price")
+          let priceNodes = document.querySelectorAll(".price")
           let color= randomColor()
           for( let priceNode of priceNodes){
               priceNode.style.color=color
